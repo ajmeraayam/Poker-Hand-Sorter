@@ -1,6 +1,6 @@
 import sys
 import getopt
-import CompareHands
+from CompareHands import CompareHands
 
 class PokerHands:
     def __init__(self, ifile, ofile):
@@ -11,9 +11,14 @@ class PokerHands:
         # Reading all the hands
         self.hands = file.readlines()
         self.cardDict = convertCardDataToTuple()
+        self.player1wins = 0
+        self.player2wins = 0
+        file.close()
 
     def findSolution(self):
-        handComparator = CompareHands()
+        wins = []
+        p1score = []
+        p2score = []
         # For all the hands in the list (input file)
         for hand in self.hands:
             # Create a list of single cards
@@ -26,7 +31,33 @@ class PokerHands:
             p1_hand = [self.cardDict[h] for h in p1_hand]
             p2_hand = [self.cardDict[h] for h in p2_hand]
             # handComparator(p1_hand, p2_hand)
+            handComparator = CompareHands()
+            response = handComparator.compare(p1_hand, p2_hand)
+            if response == -1:
+                self.player1wins += 1
+            elif response == 1:
+                self.player2wins += 1
+            
+            wins.append(response)
+            p1score.append(handComparator.p1_score)
+            p2score.append(handComparator.p2_score)
 
+        self.writeOut(zip(self.hands, wins, p1score, p2score))
+
+
+    def writeOut(self, written):
+        # Create/Open the file with the given name 
+        file = open(self.outputFile, "w")
+        # Content for the output file
+        line1 = "Player 1: " + str(self.player1wins) + "\n"
+        line2 = "Player 2: " + str(self.player2wins) + "\n"
+        # Write out to the file
+        file.writelines([line1, line2])
+
+        for hand, win, p1sc, p2sc in written:
+            file.write(hand.rstrip() + ' ' + str(win) + ' ' + str(p1sc) + ' ' + str(p2sc) + '\n')
+
+        file.close()
 
 # Returns a dictionary where a card (string) is a key and value is the corresponding tuple with number on the card as first value of tuple and colour/suit of the card as second value of tuple
 def convertCardDataToTuple():
