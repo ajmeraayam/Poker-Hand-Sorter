@@ -6,43 +6,23 @@ On Windows/Linux:
 <pre><code>cd ADDRESS_TO_THE_PYTHON_FILES
 </code></pre>
 
-The file ***PokerHands.py*** is the main file that will sort all the hands and return with the number of wins for each player for the given input file. To run the code, you must specify two parameters - input file and output file. You can point to the input file using *-i* or *--input-file*. You can point where to store the file and the name of the file by using *-o* or *--output-file*.
+The file ***PokerHands.py*** is the main file that will sort all the hands and return with the number of wins for each player for the given input file. To run the code, you must specify two parameters - input file and output file. You can point to the input file using *-i*. You can point where to store the file and the name of the file by using *-o*.
 
 __Example:__
 * If the input file is in different folder than the source code, then - 
 <pre><code> -i ADDRESS-TO-THAT-FOLDER/NAME-OF-INPUT-FILE.txt 
 </code></pre>
 
-OR
-
-<pre><code> --input-file=ADDRESS-TO-THAT-FOLDER/NAME-OF-INPUT-FILE.txt 
-</code></pre>
-
 * If the input file is in same folder as the source code, then - 
 <pre><code> -i NAME-OF-INPUT-FILE.txt 
-</code></pre>
-
-OR
-
-<pre><code> --input-file=NAME-OF-INPUT-FILE.txt 
 </code></pre>
 
 * If the output file should be stored in different folder than the source code, then - 
 <pre><code> -o ADDRESS-TO-THAT-FOLDER/NAME-OF-OUTPUT-FILE.txt 
 </code></pre>
 
-OR
-
-<pre><code> --output-file=ADDRESS-TO-THAT-FOLDER/NAME-OF-OUTPUT-FILE.txt 
-</code></pre>
-
-If the output file should be stored in same folder as the source code, then - 
+* If the output file should be stored in same folder as the source code, then - 
 <pre><code> -o NAME-OF-OUTPUT-FILE.txt 
-</code></pre>
-    
-OR
-
-<pre><code> --output-file=NAME-OF-OUTPUT-FILE.txt 
 </code></pre>
 
 ***Finally,***
