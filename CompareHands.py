@@ -219,19 +219,3 @@ class CompareHands:
             return 0
         else:
             return -1
-
-
-def list_duplicates(hand):
-    # Check flush
-    flush = False
-    seen_suit = set(suit for num, suit in hand)
-    if len(list(seen_suit)) == 1:
-        flush = True
-    else:
-        flush = False
-    
-    return flush
-
-if __name__ == '__main__':
-    a = [(14, 'D'), (13, 'D'), (12, 'D'), (11, 'D'), (9, 'D')]
-    print(list_duplicates(a))
