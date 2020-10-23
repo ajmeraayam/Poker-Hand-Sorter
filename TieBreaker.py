@@ -142,8 +142,8 @@ class TieBreaker:
 
     def _straightTieBreaker(self, p1, p2):
         # Sort the player 1 and player 2 hands by the decreasing value of the card
-        p1.sort(key = lambda x: x[0], reversed=True)
-        p2.sort(key = lambda x: x[0], reversed=True)
+        p1.sort(key = lambda x: x[0], reverse=True)
+        p2.sort(key = lambda x: x[0], reverse=True)
 
         # If the highest card in straight for player 1 has higher value than player 2 highest straight card
         if p1[0][0] > p2[0][0]:

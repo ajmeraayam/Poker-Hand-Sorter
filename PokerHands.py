@@ -16,9 +16,9 @@ class PokerHands:
         file.close()
 
     def findSolution(self):
-        wins = []
-        p1score = []
-        p2score = []
+        #wins = []
+        #p1score = []
+        #p2score = []
         # For all the hands in the list (input file)
         for hand in self.hands:
             # Create a list of single cards
@@ -38,24 +38,24 @@ class PokerHands:
             elif response == 1:
                 self.player2wins += 1
             
-            wins.append(response)
-            p1score.append(handComparator.p1_score)
-            p2score.append(handComparator.p2_score)
+            #wins.append(response)
+            #p1score.append(handComparator.p1_score)
+            #p2score.append(handComparator.p2_score)
 
-        self.writeOut(zip(self.hands, wins, p1score, p2score))
+        #self.writeOut(zip(self.hands, wins, p1score, p2score))
+        self.writeOut()
 
-
-    def writeOut(self, written):
+    def writeOut(self):
         # Create/Open the file with the given name 
         file = open(self.outputFile, "w")
         # Content for the output file
         line1 = "Player 1: " + str(self.player1wins) + "\n"
-        line2 = "Player 2: " + str(self.player2wins) + "\n"
+        line2 = "Player 2: " + str(self.player2wins)
         # Write out to the file
         file.writelines([line1, line2])
 
-        for hand, win, p1sc, p2sc in written:
-            file.write(hand.rstrip() + ' ' + str(win) + ' ' + str(p1sc) + ' ' + str(p2sc) + '\n')
+        #for hand, win, p1sc, p2sc in written:
+        #    file.write(hand.rstrip() + ' ' + str(win) + ' ' + str(p1sc) + ' ' + str(p2sc) + '\n')
 
         file.close()
 
@@ -104,8 +104,6 @@ if __name__ == '__main__':
             inputfile = arg
         elif opt in ['-o', '--output-file']:
             outputfile = arg
-
-    print('Input file - {}, output file - {}' .format(inputfile, outputfile))
 
     # Start poker hands analysis
     analysis = PokerHands(inputfile, outputfile)
