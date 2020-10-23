@@ -13,7 +13,7 @@ __Example:__
 <pre><code> -i ADDRESS-TO-THAT-FOLDER/NAME-OF-INPUT-FILE.txt 
 </code></pre>
 
-    OR
+OR
 
 <pre><code> --input-file=ADDRESS-TO-THAT-FOLDER/NAME-OF-INPUT-FILE.txt 
 </code></pre>
@@ -22,7 +22,7 @@ __Example:__
 <pre><code> -i NAME-OF-INPUT-FILE.txt 
 </code></pre>
 
-    OR
+OR
 
 <pre><code> --input-file=NAME-OF-INPUT-FILE.txt 
 </code></pre>
@@ -31,7 +31,7 @@ __Example:__
 <pre><code> -o ADDRESS-TO-THAT-FOLDER/NAME-OF-OUTPUT-FILE.txt 
 </code></pre>
 
-    OR
+OR
 
 <pre><code> --output-file=ADDRESS-TO-THAT-FOLDER/NAME-OF-OUTPUT-FILE.txt 
 </code></pre>
@@ -40,7 +40,7 @@ If the output file should be stored in same folder as the source code, then -
 <pre><code> -o NAME-OF-OUTPUT-FILE.txt 
 </code></pre>
     
-    OR
+OR
 
 <pre><code> --output-file=NAME-OF-OUTPUT-FILE.txt 
 </code></pre>
