@@ -188,7 +188,7 @@ class CompareHands:
         straight = True
         for i in range(len(hand)):
             if i > 0:
-                if hand[i][0] != (hand[i-1][0] - 1):
+                if (hand[i][0] - 1) != hand[i-1][0]:
                     straight = False
                     break
         
