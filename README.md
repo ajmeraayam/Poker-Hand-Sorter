@@ -1,6 +1,7 @@
 # Poker-Hand-Sorter
  
-To execute the code, you need python v3.6 or above. 
+To execute the code, you need python v3.6 or above. To install python on Windows, follow [this](https://docs.python.org/3.6/using/windows.html). For Linux, follow [this](https://docs.python-guide.org/starting/install3/linux/)
+
 After installing python on the workstation, go to the directory where the python files are stored.
 On Windows/Linux: 
 <pre><code>cd ADDRESS_TO_THE_PYTHON_FILES
